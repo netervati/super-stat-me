@@ -1,4 +1,4 @@
-<script setup lang="ts">
+<script lang="ts" setup>
 const searchUser = ref('');
 const isBlank = ref(false);
 
@@ -15,7 +15,7 @@ const handleEnter = (value: string): void => {
     return;
   }
 
-  alert(value);
+  console.log(value);
 };
 </script>
 
