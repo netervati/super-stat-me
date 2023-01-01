@@ -13,7 +13,6 @@ defineProps({
 <template>
   <VLazyImage
     :src="avatar_url"
-    :src_placeholder="avatar_url"
     class="
       -mt-20
       absolute
