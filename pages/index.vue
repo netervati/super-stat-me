@@ -8,14 +8,14 @@ const handleChange = (value: string): void => {
   }
 };
 
-const handleEnter = (value: string): void => {
+const handleEnter = async (value: string): Promise<void> => {
   if (value === "") {
     isBlank.value = true;
 
     return;
   }
 
-  console.log(value);
+  await navigateTo(`/profile/${value}`);
 };
 </script>
 
