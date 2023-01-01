@@ -19,10 +19,12 @@ defineProps({
       border-8
       border-white
       left-0
+      h-40
       ml-auto
       mr-auto
       right-0
       rounded-full
+      w-40
     "
   />
 </template>
