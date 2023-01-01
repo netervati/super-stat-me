@@ -2,11 +2,7 @@ import { Octokit } from "octokit";
 
 export default defineEventHandler(async (event) => {
   const query = getQuery(event);
-  const runtimeConfig = useRuntimeConfig();
-
-  const octokit = new Octokit({
-    auth: runtimeConfig.personalAccessToken,
-  });
+  const octokit = new Octokit();
 
   const {
     data: {

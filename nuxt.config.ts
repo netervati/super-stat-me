@@ -9,7 +9,4 @@ export default defineNuxtConfig({
       autoprefixer: {},
     },
   },
-  runtimeConfig: {
-    personalAccessToken: 'personal_access_token',
-  }
 })
