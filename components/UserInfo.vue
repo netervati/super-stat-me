@@ -6,6 +6,10 @@ const props = defineProps({
      required: true,
      type: Object,
    },
+   totalStars: {
+     required: true,
+     type: Number,
+   },
 });
 
 const {
@@ -59,7 +63,7 @@ const {
               type="code-bracket-square"
             />
             <Pill
-              label="Stars: 8"
+              :label="`Stars: ${totalStars}`"
               type="star"
             />
             <Pill
