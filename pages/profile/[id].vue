@@ -20,7 +20,6 @@ if (error.value) {
   clearError();
 } else {
   repositories = await useFetch(`/api/repo?username=${route.params.id}`);
-  console.log(repositories.data.value);
 }
 </script>
 
@@ -28,6 +27,7 @@ if (error.value) {
   <div v-if="!error && pending === false">
     <UserInfo
       :profile="profile"
+      :totalRepos="repositories.data.value.totalRepos"
       :totalStars="repositories.data.value.totalStars"
     />
   </div>
