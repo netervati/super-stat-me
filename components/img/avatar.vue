@@ -14,16 +14,14 @@ defineProps({
   <VLazyImage
     :src="avatar_url"
     class="
-      -mt-20
+      -mt-28
       absolute
-      border-8
-      border-white
       left-0
       h-40
       ml-auto
       mr-auto
       right-0
-      rounded-full
+      rounded-2xl
       w-40
     "
   />

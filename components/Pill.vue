@@ -10,13 +10,19 @@ import {
 const props = defineProps({
   label: {
     required: true,
-    type: String,
+    type: Number,
   },
   type: {
     default: '',
     type: String,
   },
 });
+
+const numK = (num: number): string => {
+  return Math.abs(num) > 999 ?
+    `${String(Math.round(Math.abs(num) / 100) / 10)}k` :
+    String(Math.sign(num) * Math.abs(num));
+};
 
 const setColor = (type: String): String => {
   switch(type) {
@@ -37,30 +43,39 @@ const iconClass = `icon ${setColor(props.type)}`;
 </script>
 
 <template>
-  <span :class="`pill ${setColor(type)}`">
-    <CodeBracketSquareIcon
-      :class="iconClass"
-      v-if="type === 'code-bracket-square'"
-    />
-    <StarIcon
-      :class="iconClass"
-      v-if="type === 'star'"
-    />
-    <UserGroupIcon
-      :class="iconClass"
-      v-if="type === 'user-group'"
-    />
-    <UserPlusIcon
-      :class="iconClass"
-      v-if="type === 'user-plus'"
-    />
-    {{label}}
-  </span>
+  <article class="pill">
+    <p class="font-bold text-4xl text-center">
+      {{numK(label)}}
+    </p>
+    <div class="text-center">
+    <span v-if="type === 'code-bracket-square'">
+      <CodeBracketSquareIcon :class="iconClass" />
+      Repositories
+    </span>
+    <span v-if="type === 'star'">
+      <StarIcon :class="iconClass" />
+      Stargazers
+    </span>
+    <span v-if="type === 'user-group'">
+      <UserGroupIcon :class="iconClass" />
+      Followers
+    </span>
+    <span v-if="type === 'user-plus'">
+      <UserPlusIcon :class="iconClass" />
+      Following
+    </span>
+    </div>
+  </article>
 </template>
 
 <style lang="scss" scoped>
   .icon {
-    @apply inline-block text-slate-900 h-6 w-6;
+    @apply
+      h-6
+      inline-block
+      text-slate-900
+      w-6
+    ;
 
     &.blue {
       @apply text-blue-900;
@@ -80,22 +95,12 @@ const iconClass = `icon ${setColor(props.type)}`;
   }
 
   .pill {
-    @apply ml-2 mr-2 p-2 rounded-full;
-
-    &.blue {
-      @apply bg-blue-200;
-    }
-
-    &.green {
-      @apply bg-green-200;
-    }
-
-    &.rose {
-      @apply bg-rose-200;
-    }
-
-    &.yellow {
-      @apply bg-yellow-200;
-    }
+    @apply
+      inline-block
+      ml-2
+      mr-2
+      p-2
+      w-40
+    ;
   }
 </style>

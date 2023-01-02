@@ -6,6 +6,14 @@ const props = defineProps({
      required: true,
      type: Object,
    },
+   totalRepos: {
+     required: true,
+     type: Number,
+   },
+   totalStars: {
+     required: true,
+     type: Number,
+   },
 });
 
 const {
@@ -33,7 +41,7 @@ const {
         "
       >
         <ImgAvatar :avatar_url="avatar_url" />
-        <div class="h-28"></div>
+        <div class="h-24"></div>
         <h3
           class="
             font-bold
@@ -55,19 +63,19 @@ const {
         <div class="flex mt-4">
           <article class="m-auto">
             <Pill
-              label="Repos: 14"
+              :label="totalRepos"
               type="code-bracket-square"
             />
             <Pill
-              label="Stars: 8"
+              :label="totalStars"
               type="star"
             />
             <Pill
-              :label="`Followers: ${followers}`"
+              :label="followers"
               type="user-group"
             />
             <Pill
-              :label="`Following: ${following}`"
+              :label="following"
               type="user-plus"
             />
           </article>
