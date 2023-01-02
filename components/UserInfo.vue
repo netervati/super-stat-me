@@ -33,8 +33,6 @@ const {
     <section class="m-auto w-8/12">
       <article
         class="
-          bg-white
-          mt-40
           p-8
           rounded-2xl
           w-full
