@@ -24,7 +24,8 @@ if (error.value) {
 </script>
 
 <template>
-  <div v-if="!error && pending === false">
+  <div class="bg-white" v-if="!error && pending === false">
+    <section class="bg-emerald-500 rounded-b-3xl h-48 w-screen"></section>
     <UserInfo
       :profile="profile"
       :totalRepos="repositories.data.value.totalRepos"

@@ -78,19 +78,19 @@ const iconClass = `icon ${setColor(props.type)}`;
     ;
 
     &.blue {
-      @apply text-blue-900;
+      @apply text-blue-400;
     }
 
     &.green {
-      @apply text-green-900;
+      @apply text-green-400;
     }
 
     &.rose {
-      @apply text-rose-900;
+      @apply text-rose-400;
     }
 
     &.yellow {
-      @apply text-yellow-900;
+      @apply text-yellow-400;
     }
   }
 
