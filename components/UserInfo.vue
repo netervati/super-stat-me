@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import { UserGroupIcon } from '@heroicons/vue/24/solid';
+import { UserGroupIcon } from '@heroicons/vue/24/solid/esm/index.js';
 
 const props = defineProps({
    profile: {
