@@ -25,11 +25,12 @@ if (error.value) {
 
 <template>
   <div class="bg-white" v-if="!error && pending === false">
-    <section class="bg-emerald-500 rounded-b-3xl h-48 w-screen"></section>
+    <section class="bg-emerald-500 rounded-b-3xl h-48 w-full"></section>
     <UserInfo
       :profile="profile"
       :totalRepos="repositories.data.value.totalRepos"
       :totalStars="repositories.data.value.totalStars"
     />
+    <Repository :data="repositories.data.value.repos" />
   </div>
 </template>

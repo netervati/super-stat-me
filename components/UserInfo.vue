@@ -29,7 +29,7 @@ const {
 </script>
 
 <template>
-  <div class="flex w-screen">
+  <div class="flex w-full">
     <section class="m-auto w-8/12">
       <article
         class="
