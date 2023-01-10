@@ -5,7 +5,7 @@ import {
   StarIcon,
   UserGroupIcon,
   UserPlusIcon,
-} from '@heroicons/vue/24/solid/index.js';;
+} from '@heroicons/vue/24/solid';
 
 const props = defineProps({
   label: {
