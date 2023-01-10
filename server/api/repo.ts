@@ -76,7 +76,9 @@ export default defineEventHandler(async (event): Promise<RepoStats> => {
   }
 
   return {
-    repos,
+    repos: repos.sort((a, b) => a.totalScore - b.totalScore)
+      .reverse()
+      .slice(0, 10),
     totalRepos: repos.length,
     totalStars,
   };
