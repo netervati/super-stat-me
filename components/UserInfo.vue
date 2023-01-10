@@ -28,7 +28,7 @@ const {
 
 <template>
   <div class="flex w-full">
-    <section class="m-auto w-8/12">
+    <section class="m-auto md:w-8/12 w-11/12">
       <article
         class="
           p-8
@@ -57,7 +57,15 @@ const {
         </div>
         <p class="mt-8 text-center text-xl">{{bio}}</p>
         <div class="flex mt-4">
-          <article class="m-auto">
+          <article
+            class="
+              gap-4
+              grid
+              grid-cols-2
+              lg:grid-cols-4
+              m-auto
+            "
+          >
             <Pill
               :label="totalRepos"
               type="code-bracket-square"

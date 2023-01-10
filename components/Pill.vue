@@ -95,12 +95,6 @@ const iconClass = `icon ${setColor(props.type)}`;
   }
 
   .pill {
-    @apply
-      inline-block
-      ml-2
-      mr-2
-      p-2
-      w-40
-    ;
+    @apply inline-block;
   }
 </style>
